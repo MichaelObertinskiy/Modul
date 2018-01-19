@@ -35,12 +35,16 @@ public class GuessNumber {
 
     public void game(int i, int y) {
         i++;
-
-        if (test(inputNumber(), y)) {
+        int x = inputNumber();
+        if (test(x, y)) {
             System.out.println("You win");
         } else {
-            if (i <= 5) {
-                System.out.println("Try again");
+            if (i <= 10) {
+                if (x < y){
+                    System.out.println("Try write a number more");
+                }else{
+                    System.out.println("Try write a number less");
+                }
                 game(i, y);
             } else {
                 System.out.println("You Lost");

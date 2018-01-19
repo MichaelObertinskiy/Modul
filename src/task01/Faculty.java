@@ -1,20 +1,16 @@
 package task01;
 
 import java.util.ArrayList;
+import java.util.Random;
 
-public class Faculty <T>{
-    T Student;
+public class Faculty {
 
-    public Faculty(T student) {
-        Student = student;
+    private int bal(){
+        int bal;
+        Random rand = new Random();
+        bal = rand.nextInt((7)+2);
+        return bal;
     }
-    T getStudent(){
-        return (T) student;
-    }
-
-    ArrayList<Student> student = new ArrayList<Student>();
-
-
 
 
 
